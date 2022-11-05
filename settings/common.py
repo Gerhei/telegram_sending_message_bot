@@ -5,6 +5,7 @@ API_ID = config('API_ID')
 API_HASH = config('API_HASH')
 SESSION_NAME = config('SESSION_NAME', default='session')
 
-RECIPIENT_USERNAME = config('RECIPIENT_USERNAME', default='')
-RECIPIENT_PHONE = config('RECIPIENT_PHONE', default='')
-RECIPIENT_USER_ID = config('RECIPIENT_USER_ID', default='')
+RECIPIENT = config('RECIPIENT')
+
+SENDING_TIMEOUT = config('SENDING_TIMEOUT', cast=int)
+RANDOMIZATION_DEGREE = config('RANDOMIZATION_DEGREE', cast=float)
