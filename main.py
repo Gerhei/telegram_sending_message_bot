@@ -4,7 +4,7 @@ from typing import Union
 from telethon import TelegramClient
 from telethon.tl.types import InputMessagesFilterVoice
 
-from client.utils import get_random_records, get_random_delay
+from utils.common import get_random_records, get_random_delay
 from settings.common import API_ID, API_HASH, RECIPIENT, RANDOMIZATION_DEGREE, SENDING_TIMEOUT, SESSION_NAME
 from settings.logging import logger
 
@@ -46,5 +46,6 @@ async def main():
         time.sleep(delay)
 
 
-with client:
-    client.loop.run_until_complete(main())
+if __name__ == '__main__':
+   with client:
+        client.loop.run_until_complete(main())
